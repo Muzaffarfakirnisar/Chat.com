@@ -2,7 +2,7 @@ require('dotenv').config();
 const http = require('http');
 const cors = require('cors');
 const debug = require('debug')(http);
-const PORT='https://muzaffarfakirnisar.github.io/Chat.com/'
+
 const io = require('socket.io')(server, {
   cors: {
     origin: '*',
