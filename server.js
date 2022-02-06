@@ -1,4 +1,4 @@
-const port=require('dotenv').config();
+require('dotenv').config();
 const http = require('http');
 const cors = require('cors');
 const debug = require('debug')(http);
