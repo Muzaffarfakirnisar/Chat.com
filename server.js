@@ -10,7 +10,7 @@ const io = require('socket.io')(server, {
   }
 });
 const fs = require('fs');
-var port = process.env.PORT || 8080
+var port = process.env.PORT 
 
 
 var server = http.createServer((req, res) => {
