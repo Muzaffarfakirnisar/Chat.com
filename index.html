@@ -90,7 +90,9 @@
   </form>
   <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
   <script>
-    var socket = io("https://muzaffarfakirnisar.github.io/Chat.com/");
+    var socket = io("https://muzaffarfakirnisar.github.io/Chat.com/", {
+            'force new connection': true,
+            'resource': 'path/to/socket.io'});
 
     var c = document.querySelector('#c')
     var f = document.querySelector('#f')
@@ -104,7 +106,7 @@
       i.value = '';
       socket.emit('send', message);
       audio.play()
-
+T
     })
 
     var append = (message, pos) => {
