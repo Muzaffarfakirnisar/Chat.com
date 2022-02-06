@@ -10,7 +10,7 @@ const io = require('socket.io')(server, {
   }
 });
 const fs = require('fs');
-var port = process.env.PORT 
+var port = process.env.PORT||5000
 
 
 var server = http.createServer((req, res) => {
@@ -26,6 +26,7 @@ const user = {};
 const connection = [];
 
 server.listen(port);
+io.attach(server);
 io.on('connection', (socket) => {
   connection.push(socket);
   console.log('connection')
@@ -41,4 +42,4 @@ io.on('connection', (socket) => {
 
 })
 
-io.attach(server);
+
