@@ -6,7 +6,8 @@ const debug = require('debug')(http);
 const io = require('socket.io')(server, {
   cors: {
     origin: 'https://muzaffarfakirnisar.github.io/Chat.com/:*',
-    methods: ['GET', 'POST']
+    methods: ['GET', 'POST'],
+    allowEIO3:true
   }
 });
 const fs = require('fs');
