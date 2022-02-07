@@ -10,7 +10,7 @@ const io = require('socket.io')(server, {
   }
 });
 const fs = require('fs');
-port = process.env.PORT||5000
+const port = process.env.PORT||3000
 
 
 var server = http.createServer((req, res) => {
